@@ -1,4 +1,7 @@
 #!/bin/sh
+BITS=4096
+ENCTYPE=rsa
+
 rm cluster-ssh-key 
 rm cluster-ssh-key.pub
-ssh-keygen -t rsa -b 4096 -P "" -f cluster-ssh-key
+ssh-keygen -t ${ENCTYPE} -b ${BITS} -P "" -f cluster-ssh-key
