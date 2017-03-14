@@ -1,0 +1,4 @@
+#!/bin/sh
+rm cluster-ssh-key 
+rm cluster-ssh-key.pub
+ssh-keygen -t rsa -b 4096 -P "" -f cluster-ssh-key
