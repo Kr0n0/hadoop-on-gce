@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+## Leave them empty, set them in file 'cluster.conf'
+PROJECT=""
+ZONE=""
+NODES=""
+SSH_PUB_KEY=""
+MACHINE_TYPE=""
+
+source cluster.conf
+
+## Two color codes.
+SY=$'\x1b[33;1m'
+NC=$'\x1b[0m'
+
+gcloud compute ssh $1 --zone ${ZONE} --project ${PROJECT}
